@@ -61,3 +61,5 @@ Exemplo do corpo de uma requisição de inserção de produto com POST (todos os
     "preco" :5.1
 
 }
+
+Observação: Precisei instalar o Java JDK 8 na minha máquina pra criar a api, não sei se é necessário ter ela instalada se for apenas para roda-lá, favor verificar, caso necessário, basta baixar o JDK 8 no link https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html e instalá-lo na máquina local.
