@@ -35,10 +35,15 @@ docker run -p 8080:8080 -t springio/spring-boot
 Rotas:
 
 GET      /produto        lista todos os produtos
+
 GET      /produto/id     busca o produto de um determinado id
+
 POST     /produto        insere um produto
+
 PUT      /produto/id     atualiza um produto de um determinado id
+
 PATCH    /produto/id     atualiza parcialmente um produto de um determinado id
+
 DELETE   /produto/id     deleta um produto de um determinado id
 
 Observação: ao inserir um produto, não é necessário informar o id, ele esta configurado para ser gerado automaticamente como auto-incremento.
