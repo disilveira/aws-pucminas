@@ -21,3 +21,13 @@ Nesse trabalho iremos criar uma arquitetura mínima de microsserviços que tenha
  - Disponibilização da API de manipulação de produtos e fornecedores através de um BFF API Gateway com o Ocelot ou outro produto de sua escolha.
 
 A linguagem de implementação de cada microsserviço é de livre escolha.
+
+##API Produtos
+
+Dentro da raíz da api (api-produtos), execute o seguinte comando para criar a imagem docker:
+
+docker build -t springio/spring-boot .
+
+Para subir o container docker, execute o seguinte comando:
+
+docker run -p 8080:8080 -t springio/spring-boot
