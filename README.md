@@ -51,9 +51,13 @@ Observação: ao inserir um produto, não é necessário informar o id, ele esta
 Exemplo do corpo de uma requisição de inserção de produto com POST (todos os campos a seguir são obrigatórios):
 
 {
+
     "nome":"chá",
+
     "descricao":"chá mineiro",
+
     "categoria":"alimentos",
+
     "preco" :5.1
 
 }
