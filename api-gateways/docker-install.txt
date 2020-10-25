@@ -1,0 +1,5 @@
+# comandos executar após
+# 1 Instalar           =>  docker build -t apigateways . 
+# 2 Listas as imagens  =>  docker images  
+# 3 Criar um container =>  docker run -p 3000:3000 -d apigateways
+# 4 Mostrar container  =>  docker ps 
