@@ -1,0 +1,5 @@
+filenames.txt
+imagens
+players
+scripts
+stylesheets
