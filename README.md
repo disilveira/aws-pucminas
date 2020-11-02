@@ -68,10 +68,22 @@ Observação: Precisei instalar o Java JDK 8 na minha máquina pra criar a api, 
 
 Rotas:
 
-GET      /vendas         lista todas as vendas
-GET      /vendas/id      lista uma venda pelo seu id
+Lista todas as vendas
+```
+GET /vendas
+```
 
-POST     /vendas         insere uma venda
+Lista uma venda pelo seu id
+```
+GET /vendas/id
+```
+
+Insere uma venda
+```
+POST /vendas
+```
+
+Corpo da requisição POST
 ```
 {
     "valor_venda": 19.90,
@@ -80,7 +92,12 @@ POST     /vendas         insere uma venda
 }
 ```
 
-PATCH    /vendas         atualiza uma venda pelo id passado no corpo da requisição
+Atualiza uma venda pelo id passado no corpo da requisição
+```
+PATCH /vendas
+```     
+
+Corpo da requisição PATCH
 ```
 {
     "venda_id": 1,
@@ -88,5 +105,9 @@ PATCH    /vendas         atualiza uma venda pelo id passado no corpo da requisi�
     "produto_id": 1,
     "quantidade": 2
 }
+```
 
-DELETE   /vendas/id      exclui uma venda pelo id da venda informada
+Exclui uma venda pelo id da venda informada
+```
+DELETE /vendas/id      
+```
