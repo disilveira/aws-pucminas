@@ -66,7 +66,22 @@ Observação: Precisei instalar o Java JDK 8 na minha máquina pra criar a api, 
 
 ## API de Vendas
 
-Rotas:
+### Docker
+
+Build da Imagem
+```
+docker build -t <your username>/api-vendas-v2 .
+```
+
+Executar a imagem
+```
+docker run -p 3003:3003 -d <your username>/api-vendas-v2
+```
+
+Acesso em: http://localhost:3003/vendas
+
+
+### Recursos da API
 
 Lista todas as vendas
 ```
