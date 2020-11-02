@@ -68,6 +68,8 @@ Observação: Precisei instalar o Java JDK 8 na minha máquina pra criar a api, 
 
 ### Docker
 
+Imagem: [https://hub.docker.com/repository/docker/diegoalmeidalab/api-vendas-v2](https://hub.docker.com/repository/docker/diegoalmeidalab/api-vendas-v2)
+
 Build da Imagem
 ```
 docker build -t <your username>/api-vendas-v2 .
