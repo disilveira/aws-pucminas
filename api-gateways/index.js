@@ -1,19 +1,14 @@
+require('dotenv').config()
+
 const express = require('express');
-const httpProxy = require('express-http-proxy');
+const proxy = require('express-http-proxy');
 const app = express();
 const port = 3000;
 
-const {
-  PRODUTOS_API_URL,
-  VENDAS_API_URL,
-} = require('./urls');
+let url_vendas   = process.env.API_VENDAS + ':' + process.env.API_VENDAS_PORT;
+let url_produtos = process.env.API_PRODUTOS + ':' + process.env.API_PRODUTOS_PORT;
 
-const produtosServiceProxy = httpProxy(PRODUTOS_API_URL);
-const vendasServiceProxy = httpProxy(VENDAS_API_URL);
+app.use('/vendas',proxy(url_vendas));
+app.use('/produtos',proxy(url_produtos));
 
-app.get('/', (req, res) => res.send('Hello Gateway API'));
-
-app.get('/produtos', (req, res, next) => produtosServiceProxy(req, res, next));
-app.get('/vendas', (req, res, next) => vendasServiceProxy(req, res, next));
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Servidor Gateway ativo na porta ${port}!`));
