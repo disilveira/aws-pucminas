@@ -63,3 +63,30 @@ Exemplo do corpo de uma requisição de inserção de produto com POST (todos os
 }
 
 Observação: Precisei instalar o Java JDK 8 na minha máquina pra criar a api, não sei se é necessário ter ela instalada se for apenas para roda-lá, favor verificar, caso necessário, basta baixar o JDK 8 no link https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html e instalá-lo na máquina local.
+
+## API de Vendas
+
+Rotas:
+
+GET      /vendas         lista todas as vendas
+GET      /vendas/id      lista uma venda pelo seu id
+
+POST     /vendas         insere uma venda
+```
+{
+    "valor_venda": 19.90,
+    "produto_id": 1,
+    "quantidade": 2
+}
+```
+
+PATCH    /vendas         atualiza uma venda pelo id passado no corpo da requisição
+```
+{
+    "venda_id": 1,
+    "valor_venda": 19.90,
+    "produto_id": 1,
+    "quantidade": 2
+}
+
+DELETE   /vendas/id      exclui uma venda pelo id da venda informada
