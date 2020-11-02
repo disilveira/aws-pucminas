@@ -22,7 +22,7 @@ Nesse trabalho iremos criar uma arquitetura mínima de microsserviços que tenha
 
 A linguagem de implementação de cada microsserviço é de livre escolha.
 
-##API Produtos
+## API Produtos
 
 Dentro da raíz da api (api-produtos), execute o seguinte comando para criar a imagem docker (é necessário ter o docker instalado na máquina):
 
