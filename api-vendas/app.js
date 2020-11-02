@@ -43,11 +43,12 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json({
+    message: 'error'});
 });
 
 // Listen to port 3000
-var port = process.env.PORT || 3002;
+var port = process.env.PORT || 3000;
 app.listen(port, function () {
     console.log('Listening on port 3000', port);
 });
