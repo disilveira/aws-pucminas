@@ -3,7 +3,9 @@ const router = express.Router();
 
 
 router.get('/', function(_, res) {
-  res.render('index')
+  res.json({
+   message: 'API de Vendas'
+  })
 });
 
 module.exports = router;

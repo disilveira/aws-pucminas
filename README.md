@@ -63,3 +63,68 @@ Exemplo do corpo de uma requisição de inserção de produto com POST (todos os
 }
 
 Observação: Precisei instalar o Java JDK 8 na minha máquina pra criar a api, não sei se é necessário ter ela instalada se for apenas para roda-lá, favor verificar, caso necessário, basta baixar o JDK 8 no link https://www.oracle.com/br/java/technologies/javase/javase-jdk8-downloads.html e instalá-lo na máquina local.
+
+## API de Vendas
+
+### Docker
+
+Imagem: [https://hub.docker.com/repository/docker/diegoalmeidalab/api-vendas-v2](https://hub.docker.com/repository/docker/diegoalmeidalab/api-vendas-v2)
+
+Build da Imagem
+```
+docker build -t <your username>/api-vendas-v2 .
+```
+
+Executar a imagem
+```
+docker run -p 3003:3003 -d <your username>/api-vendas-v2
+```
+
+Acesso em: http://localhost:3003/vendas
+
+
+### Recursos da API
+
+Lista todas as vendas
+```
+GET /vendas
+```
+
+Lista uma venda pelo seu id
+```
+GET /vendas/id
+```
+
+Insere uma venda
+```
+POST /vendas
+```
+
+Corpo da requisição POST
+```
+{
+    "valor_venda": 19.90,
+    "produto_id": 1,
+    "quantidade": 2
+}
+```
+
+Atualiza uma venda pelo id passado no corpo da requisição
+```
+PATCH /vendas
+```     
+
+Corpo da requisição PATCH
+```
+{
+    "venda_id": 1,
+    "valor_venda": 19.90,
+    "produto_id": 1,
+    "quantidade": 2
+}
+```
+
+Exclui uma venda pelo id da venda informada
+```
+DELETE /vendas/id      
+```
