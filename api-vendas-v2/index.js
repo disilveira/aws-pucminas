@@ -75,3 +75,34 @@ app.post("/vendas", (req, res, next) => {
         })
     });
 });
+
+/**
+ * Atualiza uma venda
+ */
+app.patch("/vendas", (req, res, next) => {
+    var reqBody = req.body;
+    db.run(`UPDATE vendas SET valor_venda = ?, produto_id = ?, quantidade = ? WHERE venda_id = ?`,
+    [reqBody.valor_venda, reqBody.produto_id, reqBody.quantidade, reqBody.venda_id],
+    function (err, result) {
+        if (err) {
+            res.status(400).json({ "error": res.message })
+            return;
+        }
+        res.status(200).json({ "id_atualizado": reqBody.venda_id });
+    });
+});
+
+/**
+ * Exclui uma venda
+ */
+app.delete("/vendas/:id", (req, res, next) => {
+    db.run(`DELETE FROM vendas WHERE venda_id = ?`,
+    req.params.id,
+    function (err, result) {
+        if (err) {
+            res.status(400).json({ "error": res.message })
+            return;
+        }
+        res.status(200).json({ "id_excluido": req.params.id });
+    });
+});
