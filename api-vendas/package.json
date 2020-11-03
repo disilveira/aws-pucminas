@@ -1,18 +1,15 @@
 {
-  "name": "vendas",
-  "version": "0.0.1",
+  "name": "api-vendas-v2",
+  "version": "1.0.0",
+  "description": "API de Vendas",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "Diego Silveira",
+  "license": "ISC",
   "dependencies": {
-    "connect-ensure-login": "^0.1.1",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
     "express": "^4.17.1",
-    "hbs": "^4.1.1",
-    "http-errors": "~1.6.3",
-    "method-override": "^3.0.0",
-    "mysql": "^2.18.1"
-  },
-  "devDependencies": {}
+    "sqlite3": "^5.0.0"
+  }
 }
