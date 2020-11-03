@@ -6,7 +6,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-const HTTP_PORT = 3003
+const HTTP_PORT = 3002
 app.listen(HTTP_PORT, () => {
     console.log("Servidor iniciado na porta " + HTTP_PORT);
 });
