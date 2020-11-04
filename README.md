@@ -152,10 +152,11 @@ Para configurar o docker, você irá precisar ver se o seu computador contém os
   - Docker(https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
   
   Após a configuração dos ips, deverá ser executado alguns comandos para realizar a configuração do docker, isso para conseguir subir as APIs e também criar os container.
-  # 1 Instalar                   =>  docker build -t apigateways . 
-  # 2 Listas as imagens  =>  docker images  
-  # 3 Criar um container =>  docker run -p 3000:3000 -d apigateways
-  # 4 Mostrar container  =>  docker p
+  
+    1 Instalar            =>   docker build -t apigateways . 
+    2 Listas as imagens   =>   docker images  
+    3 Criar um container  =>   docker run -p 3000:3000 -d apigateways
+    4 Mostrar container   =>   docker p
 
 Ao configurar o docker e criar os container poderá ser realizado as consultas das urls de produto e vendas de qualquer programa, exemplo: (Postman ou qualquer um simular).
 Exemplos de Urls:
