@@ -183,7 +183,7 @@ Get(produto/vendas):  Retorna o produto ou a venda.
     "quantidade": 2
  }
 ```
-Pesquisar um produto especifico:
+Produto especifico:
  - http://172.17.0.4/p/produto/1
 ```
 {
