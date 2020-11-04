@@ -127,4 +127,10 @@ Corpo da requisição PATCH
 Exclui uma venda pelo id da venda informada
 ```
 DELETE /vendas/id      
+
+```
+Processos para subir a aplicação.
+
+
+
 ```
