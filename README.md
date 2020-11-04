@@ -165,22 +165,23 @@ Modelos de URls
 
 Get(produto/vendas):  Retorna o produto ou a venda.  
   - http://172.17.0.4/p/produto
-                      
+```                      
 {
     "nome":"chá",
     "descricao":"chá mineiro",
     "categoria":"alimentos",
     "preco" :5.1
-}      
-
+}  
+```
 - http://172.17.0.4/v/vendas
- {
+```
+{
     "venda_id": 1,
     "valor_venda": 19.90,
     "produto_id": 1,
     "quantidade": 2
-}.
-
+ }
+```
 Pesquisar um produto especifico:
  - http://172.17.0.4/p/produto/1
  - http://172.17.0.4/v/vendas/2
@@ -188,27 +189,33 @@ Pesquisar um produto especifico:
                       
 Post(produto/vendas): inseri o produto ou a venda. 
   - http://172.17.0.4/p/produto
-                      
+```                      
 {
     "nome":"Sabão",
     "descricao":"bom para o corpo",
     "categoria":"higienico",
     "preco" :100
-}      
+}  
+```
 
 - http://172.17.0.4/v/vendas
+```
  {
     "venda_id": 2,
     "valor_venda": 100,
     "produto_id": 2,
     "quantidade": 6
 }            
-
+```
 DELETE(produto/vendas): 
 Para deletar um produto ou uma venda é necessário informar a Url em seguida o id do produto.
 - http://172.17.0.4/p/produto/1
+```
 {}
+```
 - http://172.17.0.4/v/vendas/2
+```
 {}
+```
 
 ```
