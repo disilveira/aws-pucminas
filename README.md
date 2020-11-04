@@ -137,7 +137,7 @@ Após a realização do clone do repositório, deverá ser realizado algumas con
   2 - Produto
   3 - Vendas
  ```   
-Primeiro deverá ser aberto o arquivo api-gateways/.env  e realizar as configuração dos Ips das api_produto e api_vendas
+Primeiro deverá ser aberto o arquivo api-gateways/.env  e realizar as configurações das Ips das api_produto e api_vendas
 Conforme exemplo abaixo:
   ```  
    API_PRODUTOS = http://172.17.0.4    API_PRODUTOS_PORT=8080
