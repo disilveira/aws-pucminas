@@ -131,6 +131,43 @@ DELETE /vendas/id
 ```
 Processos para subir a aplicação.
 
+Após a realização do clone do repositório, deverá ser realizado algumas configurações para subir as apis de: 
+  
+  1 - Gateway
+  2 - Produto
+  3 - Vendas
+  
+Primeiro deverá ser aberto o arquivo api-gateways/.env  e realizar a configuração dos Ips das api_produto e api_vendas
+Conforme exemplo abaixo:
+   API_PRODUTOS = http://172.17.0.4    API_PRODUTOS_PORT=8080
+   API_VENDAS   = http://172.17.0.3    API_VENDAS_PORT  =3002
+   
+   Observação: as portas já estão fixadas tanto na api_produto como api_vendas, então deverá ser configurado somente os Ips de cada api.
+   
+
+Para configurar o docker, você irá precisar ver se o seu computador contém os seguintes pré-requisitos:
+  - Windows 10 versão pro, enterprise ou education(para conferir isso, basta ir na barra de pesquisa do menu iniciar e procurar por “sistema”).
+  - X64.
+  - Virtualização habilitada (vá no seu gerenciador de tarefas, clique na aba “desempenho”, por padrão o windows já deixa habilitado).
+  - Docker(https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
+  
+  Após a configuração dos ips, deverá ser executado alguns comandos para realizar a configuração do docker, isso para conseguir subir as APIs e também criar os container.
+  # 1 Instalar                   =>  docker build -t apigateways . 
+  # 2 Listas as imagens  =>  docker images  
+  # 3 Criar um container =>  docker run -p 3000:3000 -d apigateways
+  # 4 Mostrar container  =>  docker p
+
+Ao configurar o docker e criar os container poderá ser realizado as consultas das urls de produto e vendas de qualquer programa, exemplo: (Postman ou qualquer um simular).
+Exemplos de Urls:
+
+Get(produto/vendas):  
+
+post(produto/vendas):  
+
+PUT(produto/vendas):  
+
+DELETE(produto/vendas):  
+
 
 
 ```
