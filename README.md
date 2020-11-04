@@ -132,16 +132,17 @@ DELETE /vendas/id
 ### Processos para subir a aplicação.
 
 Após a realização do clone do repositório, deverá ser realizado algumas configurações para subir as apis de.
-  
+ ```   
   1 - Gateway
   2 - Produto
   3 - Vendas
-  
+ ```   
 Primeiro deverá ser aberto o arquivo api-gateways/.env  e realizar as configuração dos Ips das api_produto e api_vendas
 Conforme exemplo abaixo:
+  ```  
    API_PRODUTOS = http://172.17.0.4    API_PRODUTOS_PORT=8080
    API_VENDAS   = http://172.17.0.3    API_VENDAS_PORT  =3002
-   
+   ```  
    Observação: as portas já estão fixadas tanto na api_produto como api_vendas, então deverá ser configurado somente os Ips de cada api.
    
 
@@ -184,8 +185,25 @@ Get(produto/vendas):  Retorna o produto ou a venda.
 ```
 Pesquisar um produto especifico:
  - http://172.17.0.4/p/produto/1
- - http://172.17.0.4/v/vendas/2
+```
+{
+    "nome":"chá",
+    "descricao":"chá mineiro",
+    "categoria":"alimentos",
+    "preco" :5.1
+} 
+```
 
+- http://172.17.0.4/v/vendas/2
+
+```
+{
+    "venda_id": 2,
+    "valor_venda": 55.90,
+    "produto_id": 1,
+    "quantidade": 2
+ }
+```
                       
 Post(produto/vendas): inseri o produto ou a venda. 
   - http://172.17.0.4/p/produto
@@ -207,7 +225,8 @@ Post(produto/vendas): inseri o produto ou a venda.
     "quantidade": 6
 }            
 ```
-DELETE(produto/vendas): 
+DELETE( produto/vendas ):
+
 Para deletar um produto ou uma venda é necessário informar a Url em seguida o id do produto.
 - http://172.17.0.4/p/produto/1
 ```
